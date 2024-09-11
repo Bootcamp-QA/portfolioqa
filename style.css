@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #34495e; 
+    background-color: #073a21; 
     color: white;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
@@ -26,12 +26,12 @@ p {
 }
 
 a {
-    color: #3498db;
+    color: #e4e9ed;
     text-decoration: none;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #a629b9;
 }
 
 
