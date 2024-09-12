@@ -1,13 +1,13 @@
 # PORTFOLIO
 This is my QA portfolio.
-[Reyes Cuesta PORTFOLIO](https://bootcamp-qa.github.io/portfolio)
+[Reyes Diaz PORTFOLIO](https://bootcamp-qa.github.io/portfolioqa/)
 
 ## BUILD WITH
 * ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## JIRA PROJECT
-[JIRA AGILE CV PROJECT](https://bootcampqareyes.atlassian.net/jira/software/projects/CVP/boards/1)
+[JIRA AGILE CV PROJECT](https://reyescuestaqa.atlassian.net/jira/software/projects/PQA/boards/1/backlog)
 This project is using JIRA tool for project management and defect traking following agile methodology SCRUM with 2 weeks´s SPRINTS.
 
 ## TEST STRATEGY
@@ -31,5 +31,5 @@ Functional and Regression test results and report of latest project version.
 
 
 ## AUTHOR
-Reyes Cuesta, QA Engineer
+Reyes Diaz, QA Engineer
 [LinkedIn Profile](https://www.linkedin.com/in/reyescuesta)
