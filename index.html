@@ -15,11 +15,11 @@
 <body>
 
   <header>
-    <h1>Reyes Diaz</h1>
-    <p>Junior QA</p>
+    <h1 data-testid="headername">Reyes Diaz</h1>
+    <p data-testid="headertitle">Junior QA</p>
     <p>
-      <a href="https://github.com/Bootcamp-QA/portfolioqa" title="GitHub" class="fa fa-github fa-2x"></a>
-      <a href="https://www.linkedin.com/in/reyescuesta" title="LinkedIn" class="fa fa-linkedin fa-2x"></a>
+      <a data-testid="githublink" href="https://github.com/Bootcamp-QA/portfolioqa" title="GitHub" class="fa fa-github fa-2x"></a>
+      <a data-testid="linkedinlink" href="https://www.linkedin.com/in/reyescuesta" title="LinkedIn" class="fa fa-linkedin fa-2x"></a>
     </p>
   </header>
 
@@ -53,10 +53,10 @@
     <section>
       <h2><i class="fa fa-envelope"></i> Contact</h2>
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSelAH07_exqwX5BQ6-Pu5iBp-cmEMJmW2APO24Xlw60aTkpVQ/formResponse" method="POST">
-        <input type="email" id="name" name="entry.1564292246" placeholder="Email"><br>
-        <input type="text" id="email" name="entry.877029958" placeholder="Subject"><br>
-        <textarea rows="4" id="message" name="entry.465720647" placeholder="Your message"></textarea><br>
-        <button type="submit"><i class="fa fa-paper-plane"></i> Send message</button>
+        <input data-testid="email" type="email" id="name" name="entry.1564292246" placeholder="Email"><br>
+        <input data-testid="subject" type="text" id="email" name="entry.877029958" placeholder="Subject"><br>
+        <textarea data-testid="message" rows="4" id="message" name="entry.465720647" placeholder="Your message"></textarea><br>
+        <button data-testid="buttonsubmitform" type="submit"><i class="fa fa-paper-plane"></i> Send message</button>
       </form>
     </section>
   </main>
