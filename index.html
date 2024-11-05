@@ -53,14 +53,14 @@
     <section>
       <h2><i class="fa fa-envelope"></i> Contact</h2>
       <form action="https://docs.google.com/forms/d/e/1FAIpQLSelAH07_exqwX5BQ6-Pu5iBp-cmEMJmW2APO24Xlw60aTkpVQ/formResponse" method="POST">
-        <input data-testid="email" type="email" id="name" name="entry.1564292246" placeholder="Email"><br>
+        <input data-testid="email" type="email" id="name" name="entry.1564292246" placeholder="Email" required><br>
         <select data-testid="subject" name="entry.877029958" required>
           <option value="">---</option>
-          <option value="informacion">Informacion</option>
-          <option value="oferta">Oferta</option>
-          <option value="otro">Otro</option>
+          <option value="information">Information</option>
+          <option value="job">Job Offer</option>
+          <option value="other">Other</option>
         </select>
-        <textarea data-testid="message" rows="4" id="message" name="entry.465720647" placeholder="Your message"></textarea><br>
+        <textarea data-testid="message" rows="4" id="message" name="entry.465720647" placeholder="Your message" required maxlenght="50"></textarea><br>
         <label for="privacypolicy">
           <input type="checkbox" id="privacypolicy" data-cy="privacypolicy" required> Acepto la Política de Privacidad
         </label>
