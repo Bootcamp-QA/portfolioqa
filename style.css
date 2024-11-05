@@ -88,6 +88,10 @@ button:hover {
     background-color: #2980b9;
 }
 
+input:invalid, select:invalid, textarea:invalid, checkbox:invalid {
+  background-color:  background-color: rgb(255, 230, 230); /* Light red background */
+}
+
 
 footer {
     margin-top: 2rem;
