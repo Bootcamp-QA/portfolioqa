@@ -70,6 +70,8 @@ input[type="checkbox"] {
     margin-right: 0.5rem; /* Agrega un pequeño espacio entre el checkbox y el texto */
 }
 
+
+
 label {
     display: inline-block; /* Asegura que el checkbox y el texto estén en la misma línea */
 }
@@ -88,8 +90,12 @@ button:hover {
     background-color: #2980b9;
 }
 
-input:invalid, select:invalid, textarea:invalid, checkbox:invalid {
+input:invalid, select:invalid, textarea:invalid {
   background-color: rgb(255, 230, 230); /* Light red background */
+}
+
+input[type="checkbox"]:required:not(:checked) {
+  background-color: rgb(255, 230, 230); /* Fondo rojo claro si es inválido */
 }
 
 
