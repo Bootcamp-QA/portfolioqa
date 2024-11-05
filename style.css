@@ -89,7 +89,7 @@ button:hover {
 }
 
 input:invalid, select:invalid, textarea:invalid, checkbox:invalid {
-  background-color:  background-color: rgb(255, 230, 230); /* Light red background */
+  background-color: rgb(255, 230, 230); /* Light red background */
 }
 
 
