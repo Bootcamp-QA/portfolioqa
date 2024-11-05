@@ -55,7 +55,7 @@ form {
     width: 100%; 
 }
 
-input, textarea, select, label {
+input, textarea, select {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -63,6 +63,15 @@ input, textarea, select, label {
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     background-color: #f9f9f9;
+}
+
+input[type="checkbox"] {
+    width: auto; /* Permite que el checkbox ocupe solo el espacio necesario */
+    margin-right: 0.5rem; /* Agrega un pequeño espacio entre el checkbox y el texto */
+}
+
+label {
+    display: inline-block; /* Asegura que el checkbox y el texto estén en la misma línea */
 }
 
 button {
