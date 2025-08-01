@@ -1,106 +1,88 @@
-
 body {
-    font-family: 'Verdana', Arial, sans-serif; 
-    font-size: 1rem; 
-    color: #2c3e50;
-    background-color: #f4f4f4;
-    padding: 2rem 1rem; 
-    text-align: center;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 100%;
+  color: #2c3e50;
+  background-color: #f4f4f4;
+  padding: 5% 3%;
+  text-align: center;
 }
 
 header {
-    background-color: #073a23; 
-    color: white;
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
+  background-color: #073a23;
+  color: white;
+  padding: 8% 5%;
+  margin-bottom: 5%;
 }
 
 h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 200%;
+  margin-bottom: 3%;
 }
 
 p {
-    font-size: 1.1rem; 
-    margin-bottom: 1.5rem;
+  font-size: 110%;
+  margin-bottom: 5%;
 }
 
 a {
-    color: #e4e8ed;
-    text-decoration: none;
+  color: #e4e8ed;
+  text-decoration: none;
 }
-
-a:hover {
-    color: #a629b9;
-}
-
-
 
 main {
-    margin: auto 5%;
-    text-align: left;
+  margin: 0 5%;
+  text-align: left;
 }
 
 section {
-    margin-bottom: 2.5rem; 
+  margin-bottom: 7%;
 }
 
 h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: #34495e; 
-}
-/* Estilos del formulario */
-form {
-    width: 100%; 
+  font-size: 160%;
+  margin-bottom: 3%;
+  color: #34495e;
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
+form {
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 3%;
+  margin-bottom: 5%;
+  font-size: 100%;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
 }
 
 input[type="checkbox"] {
-    width: auto; /* Permite que el checkbox ocupe solo el espacio necesario */
-    margin-right: 0.5rem; /* Agrega un pequeño espacio entre el checkbox y el texto */
+  width: auto;
+  margin-right: 3%;
+  vertical-align: middle;
 }
 
-
-
 label {
-    display: inline-block; /* Asegura que el checkbox y el texto estén en la misma línea */
+  font-size: 100%;
 }
 
 button {
-    width: 100%; 
-    padding: 1rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+  width: 100%;
+  padding: 4%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 100%;
+  cursor: pointer;
 }
-
-button:hover {
-    background-color: #2980b9;
-}
-
-input:invalid, select:invalid, textarea:invalid {
-  background-color: rgb(255, 230, 230); /* Light red background */
-}
-
-input[type="checkbox"]:required:not(:checked) {
-  background-color: rgb(255, 230, 230); /* Fondo rojo claro si es inválido */
-}
-
 
 footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #777;
+  margin-top: 5%;
+  font-size: 90%;
+  color: #777;
+  text-align: center;
 }
+
