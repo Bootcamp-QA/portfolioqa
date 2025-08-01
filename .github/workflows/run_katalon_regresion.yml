@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python 3.x
       uses: actions/setup-python@v4
@@ -43,7 +43,7 @@ jobs:
         robot --outputdir results tests/
 
     - name: Upload Robot Framework report and logs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: robot-framework-report
         path: results/
