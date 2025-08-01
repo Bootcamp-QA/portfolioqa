@@ -2,6 +2,7 @@ name: Ejecutar tests Robot Framework simples
 
 on:
   push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -19,5 +20,11 @@ jobs:
     - name: Install Robot Framework and SeleniumLibrary
       run: pip install robotframework selenium robotframework-seleniumlibrary
 
-    - name: Run tests
-      run: robot testsuite/
+    - name: Run Robot Framework tests
+      run: robot --outputdir results tests/
+
+    - name: Upload Robot Framework reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-reports
+        path: results/
