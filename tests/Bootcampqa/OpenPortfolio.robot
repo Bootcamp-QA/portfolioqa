@@ -10,6 +10,7 @@ robotframework-testing_selenium
     [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     # open    https://bootcamp-qa.github.io/portfolioqa/
+    click    link=Sobre mí
     [Teardown]  Close Browser
 
 *** Keywords ***
