@@ -4,11 +4,10 @@ Library  SeleniumLibrary
 *** Variables ***
 ${BROWSER}   chrome
 ${SELSPEED}  0.0s
-@{CHROME_OPTIONS}  --no-sandbox  --disable-dev-shm-usage
 
 *** Test Cases ***
 robotframework-testing_selenium
-    [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER} options=${CHROME_OPTIONS}
+    [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER} options=${{"args": ["--no-sandbox", "--disable-dev-shm-usage"]}}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     # open    https://bootcamp-qa.github.io/portfolioqa/
     click    link=Sobre mí
