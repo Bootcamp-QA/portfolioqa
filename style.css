@@ -1,39 +1,59 @@
 body {
   font-family: Verdana, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 1rem;
   color: black;
-  text-align: center;
+  margin: 0;
 }
 
 header {
   background-color: rgb(7, 167, 153);
   color: white;
-  padding: 0.5%;
-}
-main {
-  padding: 2%;
-  text-align: left;
-}
-
-nav ul.menu {
-  list-style: none;
+  padding: 5rem;
   text-align: center;
 }
 
-nav ul.menu li {
+main {
+  padding: 5rem;
+  text-align: left;
+}
+
+nav {
+  text-align: center;
+  width:100%;
+  padding: 1rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+    background-color: white;
+  
+}
+
+nav ul li {
   display: inline-block;
-  margin-right: 5%;
-  font-size: 100%;
+  margin: 0rem;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem ;
+
+}
+/* Menú vertical en móvil */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.8rem 0;
+  }
 }
 
 h1 {
-  font-size: 200%;
-  margin-bottom: 0.5%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size: 110%;
-  margin-bottom: 0.5%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -41,44 +61,51 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 section {
-  margin-bottom: 0.5%;
+  margin-bottom: 3rem;
 }
 
 h2 {
-  font-size: 160%;
-  margin-bottom: 0.5%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: #34495e;
 }
 
+/* FORMULARIO */
 form {
   width: 100%;
+  font-size: 1rem;
 }
 
 input,
 textarea,
 select {
   width: 100%;
-  padding: 1%;
-  margin-bottom:0.5%;
-  font-size: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  background-color: #fdfdfd;
 }
 
 button {
   width: 100%;
-  padding: 1%;
-  background-color: #3498db;
+  padding: 1rem;
+  background-color: #02463a;
   color: white;
   border: none;
-  font-size: 100%;
-  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 footer {
-  margin-top: 0.5%;
-  font-size: 90%;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
   color: #777;
   text-align: center;
 }
