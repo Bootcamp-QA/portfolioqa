@@ -1,49 +1,23 @@
-name: Ejecutar test Katalon Robot Framework
+name: Ejecutar tests Robot Framework simples
 
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  run-robot-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-    - name: Set up Python 3.x
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
-    - name: Install Robot Framework and dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install robotframework selenium robotframework-seleniumlibrary
+    - name: Install Robot Framework and SeleniumLibrary
+      run: pip install robotframework selenium robotframework-seleniumlibrary
 
-    - name: Install Google Chrome
-      run: |
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
-        google-chrome --version
-
-    - name: Download ChromeDriver matching Chrome version
-      run: |
-        CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-        wget -N https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}
-        CHROMEDRIVER_VERSION=$(cat LATEST_RELEASE_${CHROME_VERSION})
-        wget -N https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
-        unzip -o chromedriver_linux64.zip
-        sudo mv chromedriver /usr/local/bin/
-        chromedriver --version
-
-    - name: Run Robot Framework tests
-      run: |
-        robot --outputdir results tests/
-
-    - name: Upload Robot Framework report and logs
-      uses: actions/upload-artifact@v4
-      with:
-        name: robot-framework-report
-        path: results/
+    - name: Run tests
+      run: robot testsuite/
