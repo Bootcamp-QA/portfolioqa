@@ -7,7 +7,7 @@ ${SELSPEED}  0.0s
 
 *** Test Cases ***
 robotframework-testing_selenium
-    [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER} --no-sandbox  --disable-dev-shm-usage
+    [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER} options=--no-sandbox  --disable-dev-shm-usage
     ...              AND   Set Selenium Speed  ${SELSPEED}
     # open    https://bootcamp-qa.github.io/portfolioqa/
     click    link=Sobre mí
