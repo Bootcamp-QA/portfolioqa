@@ -7,8 +7,10 @@ ${SELSPEED}  0.0s
 
 *** Test Cases ***
 robotframework-testing_selenium
-    [Setup]  Run Keywords  Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER} options=${{"args": ["--no-sandbox", "--disable-dev-shm-usage"]}}
-    ...              AND   Set Selenium Speed  ${SELSPEED}
+    [Setup]  Run Keywords
+    ...    ${options}=    Create Dictionary    args=--no-sandbox,--disable-dev-shm-usage
+    ...    Open Browser  https://bootcamp-qa.github.io/portfolioqa/  ${BROWSER}  options=${options}
+    ...    AND   Set Selenium Speed  ${SELSPEED}
     # open    https://bootcamp-qa.github.io/portfolioqa/
     click    link=Sobre mí
     [Teardown]  Close Browser
