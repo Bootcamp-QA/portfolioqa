@@ -1,35 +1,34 @@
-# PORTFOLIO
-This is my QA portfolio.
-[Reyes Diaz PORTFOLIO](https://bootcamp-qa.github.io/portfolioqa/)
+# Portfolio QA – Reyes Díaz  
+**Portafolio web personal de proyectos de QA**  
+🔗 [Ver Portfolio en línea](https://bootcamp-qa.github.io/portfolioqa/)
 
-## BUILD WITH
-* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+---
 
-## JIRA PROJECT
-[JIRA AGILE CV PROJECT](https://reyescuestaqa.atlassian.net/jira/software/projects/PQA/boards/1/backlog)
-This project is using JIRA tool for project management and defect traking following agile methodology SCRUM with 2 weeks´s SPRINTS.
+## 🛠 Tecnologías utilizadas
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-## TEST STRATEGY
-This project adopts BDD Methodology for testing.
+---
 
-1. Test Design: Functional test scenarios are defined for each user story before development using the Gherkin language, facilitated by the Test Management Tool Zephyr Scale for Jira.
+## ⚙️ Funcionalidades principales
+- Menú de navegación responsive
+- Header con nombre, título profesional y enlaces a redes
+- Sección de proyectos QA con descripción detallada
+- Sección de formación académica
+- Formulario de contacto
 
-2. Functional Test Execution and Bug Report: Functional test scenarios are executed manually on both Desktop and Mobile platforms for each new functionality. Any encountered bugs are promptly logged on JIRA and linked to the respective user story and test scenario. Comprehensive test results are meticulously documented using Zephyr Scale.
+---
 
-4. Regression Test Execution: At the conclusion of each Sprint, regression test scenarios are manually executed on both Desktop and Mobile platforms. The outcomes of these tests are  recorded using Zephyr Scale.
-
-
-
-### TEST DOCUMENTATION
-[Functional Test Plan](/tests/test-plan.pdf)
-[Regression Test Plan](/tests/regression-test-plan.pdf)
-
-### TEST RESULTS
-Functional and Regression test results and report of latest project version. 
-* [Manual Test Results and Bug Report](/tests/test-results-and-bug-report.pdf) 
+## QA Tests
+Este portfolio incluye pruebas de regresión automatizadas con **Katalon Studio (Selenium)**.  
+Los tests validan la funcionalidad principal del sitio y se ejecutan automáticamente con **GitHub Actions** después de cada cambio y de forma semanal programada.
 
 
-## AUTHOR
-Reyes Diaz, QA Engineer
-[LinkedIn Profile](https://www.linkedin.com/in/reyescuesta)
+Puedes consultar los resultados y en este enlace.
+
+---
+
+## 👩‍💻 Autor
+**Reyes Díaz – QA Junior**  
+[🔗 LinkedIn](https://www.linkedin.com/in/reyescuesta)
+
