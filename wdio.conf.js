@@ -29,15 +29,13 @@ exports.config = {
 
     framework: 'mocha',
     reporters: [
-        'spec',
-        ['html-nice', {
-            outputDir: './reports/html-reports/',
-            filename: 'report.html',
-            reportTitle: 'WDIO Test Report',
-            showInBrowser: false,
-            useOnAfterCommandForScreenshot: false
-        }]
-    ],
+    ['allure', {
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }],
+    'spec'
+  ],
 
     mochaOpts: {
         ui: 'bdd',
