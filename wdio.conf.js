@@ -8,7 +8,16 @@ exports.config = {
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': {
+            args: [
+                '--headless',
+                '--no-sandbox',
+                '--disable-dev-shm-usage',
+                '--window-size=1920,1080',
+                '--user-data-dir=/tmp/chrome-user-data-dir'  // Directorio temporal para evitar conflictos
+            ]
+        }
     }],
     logLevel: 'info',
     bail: 0,
@@ -34,4 +43,4 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
-}
+};
