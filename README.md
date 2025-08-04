@@ -20,11 +20,8 @@
 ---
 
 ## QA Tests
-Este portfolio incluye pruebas de regresión automatizadas con **Katalon Studio (Selenium)**.  
-Los tests validan la funcionalidad principal del sitio y se ejecutan automáticamente con **GitHub Actions** después de cada cambio y de forma semanal programada.
+Este portfolio incluye pruebas de regresión automatizadas con **Katalon Studio (Selenium)** de todas las funcionalidades principales.
 
-
-Puedes consultar los resultados y en este enlace.
 
 ---
 
