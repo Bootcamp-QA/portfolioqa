@@ -20,8 +20,15 @@
 ---
 
 ## QA Tests
-Este portfolio incluye pruebas de regresión automatizadas con **Katalon Studio (Selenium)** de todas las funcionalidades principales.
+Este portfolio incluye pruebas de regresión automatizadas con **Katalon Studio (Selenium)** de todas las funcionalidades principales. 
 
+![Resultados](./tests/resultados.png)
+
+Para ejecutar los tests:
+1. Descarga la carpeta tests
+2. Abre el navegador chrome, busca e instala la extensión Katalon Recorder (Selenium Tests) [🔗 Extensiones Chrome](https://chromewebstore.google.com/ )
+3. Abre la extensión Katalon Recorder y elige la opción Open test suite. Abre la carpeta tests que has descargado.
+4. Ejecuta los test haciendo clic en Play all suites.
 
 ---
 
