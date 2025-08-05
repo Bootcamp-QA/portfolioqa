@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>BootcampQA-Menu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">Visitar todos los enlaces del menu</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://bootcamp-qa.github.io/portfolioqa/<datalist></datalist></td><td></td></tr>
+<tr><td>echo</td><td>Visita menu sobre mi<datalist><option>Visita menu sobre mi</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=menusobremi<datalist></datalist></td><td></td></tr>
+<tr><td>assertLocation</td><td>https://bootcamp-qa.github.io/portfolioqa/#sobremi<datalist></datalist></td><td></td></tr>
+<tr><td>echo</td><td>Visita menu proyectos<datalist><option>Visita menu proyectos</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=menuproyectos<datalist></datalist></td><td></td></tr>
+<tr><td>assertLocation</td><td>https://bootcamp-qa.github.io/portfolioqa/#proyectos<datalist></datalist></td><td></td></tr>
+<tr><td>echo</td><td>Visita menu Educacion<datalist><option>Visita menu Educacion</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=menueducacion<datalist></datalist></td><td></td></tr>
+<tr><td>assertLocation</td><td>https://bootcamp-qa.github.io/portfolioqa/#educacion<datalist></datalist></td><td></td></tr>
+<tr><td>echo</td><td>Visita menu Contacto<datalist><option>Visita menu Contacto</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>id=menucontacto<datalist></datalist></td><td></td></tr>
+<tr><td>assertLocation</td><td>https://bootcamp-qa.github.io/portfolioqa/#contacto<datalist></datalist></td><td></td></tr>
+</tbody></table>
+</body>
+</html>
