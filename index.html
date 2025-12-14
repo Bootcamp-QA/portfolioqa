@@ -131,16 +131,16 @@
         <i class="fa fa-envelope"></i> Contacto
       </h2>
       <form id="contactForm">
-        <input id="email" type="email" id="name" name="entry.1564292246" placeholder="Email" required />
-        <select id="asunto" name="entry.877029958" required>
+        <input id="email" type="email" id="name" placeholder="Email"  />
+         <input id="nombre" type="text" id="name" placeholder="Email"  />
+        <select id="asunto" >
           <option value="">---</option>
           <option value="information">Información</option>
           <option value="job">Oferta Trabajo</option>
           <option value="other">Otro</option>
         </select>
-        <textarea id="mensaje" rows="4" id="message" name="entry.465720647" placeholder="Escribe tu mensaje"
-          required maxlength="50"></textarea>
-        <button id="enviar" type="submit">
+        <textarea id="mensaje" rows="4" id="message" placeholder="Escribe tu mensaje"></textarea>
+        <button id="enviar" type="submit"  onclick="enviarFormulario()">
           <i class="fa fa-paper-plane"></i> Enviar
         </button>
       </form>
