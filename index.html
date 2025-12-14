@@ -130,7 +130,7 @@
   <h2 id="titulocontacto">
     <i class="fa fa-envelope"></i> Contacto
   </h2>
-  <form id="contactForm" onsubmit="enviarFormulario(); return false;">
+  <form id="contactForm" onsubmit="return enviarFormulario(event)">
     <input id="nombre" type="text" placeholder="Nombre" />
     <input id="email" type="email" placeholder="Email" required />
     <select id="asunto" required>
