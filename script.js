@@ -29,9 +29,9 @@ function enviarFormulario(event) {
   })
   .then(function(response) {
     if (!response.ok) throw new Error('Insert error');
-    return response.json();
+    return true;
   })
-  .then(function(result) {
+  .then(function() {
     formMessage.textContent = 'Mensaje enviado';
     formMessage.style.color = 'green';
     document.getElementById('contactForm').reset();
