@@ -5,47 +5,46 @@ const SUPABASE_API_KEY = 'sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ';
 // ----------------------------
 // FUNCION PARA ENVIAR FORMULARIO
 // ----------------------------
-async function enviarFormulario(event) {
-  event.preventDefault();
-  const formMessage = document.getElementById('formMessage');
-
-  // Limpiar mensaje previo
+function enviarFormulario(event) {
+  event.preventDefault(); // esto funciona correctamente
+  var formMessage = document.getElementById('formMessage');
   formMessage.textContent = '';
   formMessage.style.color = '';
 
-  const data = {
+  var data = {
     email: document.getElementById('email').value,
     subject: document.getElementById('asunto').value,
     message: document.getElementById('mensaje').value,
-    name: document.getElementById('nombre').value,
+    name: document.getElementById('nombre').value || null
   };
 
-  try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/forms`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_API_KEY,
-        'Authorization': `Bearer ${SUPABASE_API_KEY}`
-      },
-      body: JSON.stringify(data)
-    });
-
+  fetch('https://ifgzperqnxoomyvvytzr.supabase.co/rest/v1/forms', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': 'sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ',
+      'Authorization': 'Bearer sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(function(response) {
     if (!response.ok) throw new Error('Insert error');
-
+    return response.json();
+  })
+  .then(function(result) {
     formMessage.textContent = 'Mensaje enviado';
     formMessage.style.color = 'green';
     document.getElementById('contactForm').reset();
-
-  } catch (error) {
+  })
+  .catch(function(error) {
     console.error(error);
     formMessage.textContent = 'Error';
     formMessage.style.color = 'red';
-  }
+  });
 
-  // Evitar que el formulario haga submit normal
-  return false;
+  return false; // evita submit normal
 }
+
 
 // ----------------------------
 // FUNCION PARA VER MENSAJES EN ADMIN
