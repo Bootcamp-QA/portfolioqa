@@ -16,7 +16,7 @@ async function enviarFormulario() {
     email: document.getElementById('email').value,
     subject: document.getElementById('asunto').value,
     message: document.getElementById('mensaje').value,
-    name: null
+    name: document.getElementById('nombre').value,
   };
 
   try {
@@ -76,6 +76,7 @@ async function verMensajes() {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>${form.id}</td>
+        <td>${form.name}</td>
         <td>${form.email}</td>
         <td>${form.subject}</td>
         <td>${form.message}</td>
