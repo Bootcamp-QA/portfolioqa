@@ -5,7 +5,8 @@ const SUPABASE_API_KEY = 'sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ';
 // ----------------------------
 // FUNCION PARA ENVIAR FORMULARIO
 // ----------------------------
-async function enviarFormulario() {
+async function enviarFormulario(event) {
+  event.preventDefault();
   const formMessage = document.getElementById('formMessage');
 
   // Limpiar mensaje previo
