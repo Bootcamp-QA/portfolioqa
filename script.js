@@ -13,6 +13,7 @@ form.addEventListener('submit', async (event) => {
   formMessage.textContent = '';
   formMessage.style.color = '';
 
+  // Datos del formulario
   const data = {
     email: document.getElementById('email').value,
     subject: document.getElementById('asunto').value,
@@ -21,6 +22,7 @@ form.addEventListener('submit', async (event) => {
   };
 
   try {
+    // Enviar a Supabase
     const response = await fetch(`${SUPABASE_URL}/rest/v1/forms`, {
       method: 'POST',
       headers: {
@@ -31,20 +33,18 @@ form.addEventListener('submit', async (event) => {
       body: JSON.stringify(data)
     });
 
-    if (!response.ok) {
-      throw new Error('Insert error');
-    }
+    if (!response.ok) throw new Error('Insert error');
 
-    // ÉXITO
+    // Mensaje de éxito
     formMessage.textContent = 'Mensaje enviado';
     formMessage.style.color = 'green';
     form.reset();
 
   } catch (error) {
     console.error(error);
-
-    // ERROR
+    // Mensaje de error
     formMessage.textContent = 'Error';
     formMessage.style.color = 'red';
   }
 });
+
