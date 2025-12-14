@@ -117,12 +117,14 @@ table {
 th {
   padding: 0.8rem;
   text-align: left;
+  max-width: 20%;
   background-color: #f9f9f9;
 }
 
 td {
   padding: 0.8rem;
   text-align: left;
+  max-width: 20%;
   
 }
 
