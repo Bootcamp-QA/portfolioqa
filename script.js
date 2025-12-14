@@ -2,49 +2,103 @@
 const SUPABASE_URL = 'https://ifgzperqnxoomyvvytzr.supabase.co';
 const SUPABASE_API_KEY = 'sb_publishable_s4C8y1rgb321cEF5B969MA_3jMwVpNJ';
 
-// ELEMENTOS
+// --- FORMULARIO ---
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
+if (form) {
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  // Limpiar mensaje previo
-  formMessage.textContent = '';
-  formMessage.style.color = '';
+    // Limpiar mensaje previo
+    formMessage.textContent = '';
+    formMessage.style.color = '';
 
-  // Datos del formulario
-  const data = {
-    email: document.getElementById('email').value,
-    subject: document.getElementById('asunto').value,
-    message: document.getElementById('mensaje').value,
-    name: null
-  };
+    const data = {
+      email: document.getElementById('email').value,
+      subject: document.getElementById('asunto').value,
+      message: document.getElementById('mensaje').value,
+      name: null
+    };
+
+    try {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/forms`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_API_KEY,
+          'Authorization': `Bearer ${SUPABASE_API_KEY}`
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) throw new Error('Insert error');
+
+      formMessage.textContent = 'Mensaje enviado';
+      formMessage.style.color = 'green';
+      form.reset();
+
+      // Recargar la tabla si existe
+      if (document.getElementById('formsTable')) {
+        loadForms();
+      }
+
+    } catch (error) {
+      console.error(error);
+      formMessage.textContent = 'Error';
+      formMessage.style.color = 'red';
+    }
+  });
+}
+
+// --- ADMIN TABLE ---
+const tableBody = document.querySelector('#formsTable tbody');
+const status = document.getElementById('status');
+
+async function loadForms() {
+  if (!tableBody || !status) return;
+
+  status.textContent = 'Loading...';
 
   try {
-    // Enviar a Supabase
     const response = await fetch(`${SUPABASE_URL}/rest/v1/forms`, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         'apikey': SUPABASE_API_KEY,
         'Authorization': `Bearer ${SUPABASE_API_KEY}`
-      },
-      body: JSON.stringify(data)
+      }
     });
 
-    if (!response.ok) throw new Error('Insert error');
+    if (!response.ok) throw new Error('Failed to fetch');
 
-    // Mensaje de éxito
-    formMessage.textContent = 'Mensaje enviado';
-    formMessage.style.color = 'green';
-    form.reset();
+    const data = await response.json();
+
+    tableBody.innerHTML = '';
+
+    data.forEach(form => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${form.id}</td>
+        <td>${form.email}</td>
+        <td>${form.subject}</td>
+        <td>${form.message}</td>
+        <td>${form.sent_at}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    status.textContent = `Loaded ${data.length} entries`;
 
   } catch (error) {
     console.error(error);
-    // Mensaje de error
-    formMessage.textContent = 'Error';
-    formMessage.style.color = 'red';
+    status.textContent = 'Error loading data';
   }
+}
+
+// Cargar tabla automáticamente si existe
+if (tableBody) {
+  loadForms();
+}
+
 });
 
