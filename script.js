@@ -15,7 +15,7 @@ function enviarFormulario(event) {
     email: document.getElementById('email').value,
     subject: document.getElementById('asunto').value,
     message: document.getElementById('mensaje').value,
-    name: document.getElementById('nombre').value || null
+    name: document.getElementById('nombre').value
   };
 
   fetch('https://ifgzperqnxoomyvvytzr.supabase.co/rest/v1/forms', {
