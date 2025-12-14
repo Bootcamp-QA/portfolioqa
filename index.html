@@ -132,14 +132,14 @@
   </h2>
   <form id="contactForm" onsubmit="return enviarFormulario(event)">
     <input id="nombre" type="text" placeholder="Nombre" />
-    <input id="email" type="email" placeholder="Email" required />
-    <select id="asunto" required>
+    <input id="email" type="email" placeholder="Email" />
+    <select id="asunto">
       <option value="">---</option>
       <option value="information">Información</option>
       <option value="job">Oferta Trabajo</option>
       <option value="other">Otro</option>
     </select>
-    <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+    <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
     <button id="enviar" type="submit">
       <i class="fa fa-paper-plane"></i> Enviar
     </button>
