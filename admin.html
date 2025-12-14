@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Admin - Forms</title>
-    <link href="style.css" rel="stylesheet" />
+  <title>Admin - Mensajes</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Admin - Contact Forms</h1>
+<header>
+  <h1>Admin</h1>
+</header>
 
-<table id="formsTable" border="1">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Email</th>
-      <th>Subject</th>
-      <th>Message</th>
-      <th>Sent at</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Data will be inserted here -->
-  </tbody>
-</table>
+<main>
+  <section id="admin">
+    <h2>Mensajes recibidos</h2>
+    <button id="verMensajes" onclick="verMensajes()">Ver mensajes</button>
 
-<p id="status"></p>
+    <table id="formsTable" border="1" style="margin-top: 1rem;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Asunto</th>
+          <th>Mensaje</th>
+          <th>Fecha de envío</th>
+        </tr>
+      </thead>
+      <tbody id="formsBody">
+        <!-- Se cargarán los registros aquí -->
+      </tbody>
+    </table>
 
-<!-- Enlazamos el JS externo -->
+    <p id="status"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Mi footer</p>
+</footer>
+
 <script src="script.js"></script>
 
 </body>
 </html>
+
